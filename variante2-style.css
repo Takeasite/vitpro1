@@ -1,14 +1,14 @@
 /*
 ===========================================
-VITRINE PRO - VARIANTE 2
+Électricité Pro Services - VARIANTE 2 PREMIUM
 Style: Modern Editorial / Corporate Bold
-Typo: Playfair Display + DM Sans
-Couleurs: Deep Navy + Vibrant Orange
+Généré par TakeASite
+Date: 21/01/2026 12:50
 ===========================================
 */
 
 :root {
-  /* Couleurs principales - Navy + Orange (vs Purple de Marie) */
+  /* Couleurs client */
   --primary: #1a2332;
   --secondary: #ff6b35;
   --accent: #4a90e2;
@@ -19,14 +19,14 @@ Couleurs: Deep Navy + Vibrant Orange
   --bg-dark: #0d1117;
   
   /* Texte */
-  --text-dark: #1a2332;
+  --text-dark: #1a1a1a;
   --text-light: #6c757d;
   --text-white: #ffffff;
   
-  /* Shadows & Effects */
-  --shadow-sm: 0 2px 8px rgba(26, 35, 50, 0.08);
-  --shadow-md: 0 8px 24px rgba(26, 35, 50, 0.12);
-  --shadow-lg: 0 16px 48px rgba(26, 35, 50, 0.16);
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.16);
   
   /* Spacing */
   --header-height: 80px;
@@ -51,20 +51,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   line-height: 1.2;
 }
 
-/* ================================
-   HEADER - Minimaliste & moderne
-   ================================ */
+/* ======================================
+   HEADER
+   ====================================== */
 #header {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(26, 35, 50, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   position: fixed;
   width: 100%;
@@ -92,12 +91,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
   text-decoration: none;
   transition: var(--transition-smooth);
-}
-
-.logo-accent {
-  color: var(--secondary);
-  font-size: 2rem;
-  line-height: 1;
 }
 
 .logo-text:hover {
@@ -143,36 +136,17 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--secondary);
 }
 
-.nav-toggle {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  border: none;
-  background: var(--primary);
-  color: white;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-}
-
-.nav-toggle:hover {
-  background: var(--secondary);
-}
-
-/* ================================
-   HERO V2 - Full Width Asymétrique
-   ================================ */
+/* ======================================
+   HERO - Modern avec stats et cards
+   ====================================== */
 .hero-v2 {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0d1117 0%, #1a2332 50%, #2c3e50 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
   position: relative;
   padding: calc(var(--header-height) + 80px) 40px 80px;
   overflow: hidden;
 }
 
-/* Geometric background pattern */
 .hero-v2::before {
   content: '';
   position: absolute;
@@ -240,27 +214,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   margin-bottom: 30px;
   letter-spacing: -2px;
+  white-space: pre-line;
 }
 
-.hero-highlight {
-  color: var(--secondary);
-  position: relative;
-  display: inline-block;
-}
-
-.hero-highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  background: var(--secondary);
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.hero-description {
+.hero-subtitle {
   font-size: 1.25rem;
   line-height: 1.8;
   margin-bottom: 40px;
@@ -434,11 +391,11 @@ h1, h2, h3, h4, h5, h6 {
   50% { transform: translateX(-50%) translateY(-10px); }
 }
 
-/* ================================
-   SERVICES V2 - Liste Horizontale
-   ================================ */
+/* ======================================
+   SERVICES - Liste horizontale moderne
+   ====================================== */
 .services-v2 {
-  padding: 120px 0;
+  padding: 120px 40px;
   background: var(--bg-white);
 }
 
@@ -589,9 +546,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-/* ================================
-   PORTFOLIO V2 - Grid Asymétrique
-   ================================ */
+/* ======================================
+   PORTFOLIO - Grid asymétrique
+   ====================================== */
 .portfolio-v2 {
   padding: 120px 40px;
   background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-light) 100%);
@@ -602,6 +559,9 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-top: 60px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio-item {
@@ -633,6 +593,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   aspect-ratio: 4/3;
+  background: #f0f0f0;
 }
 
 .portfolio-item.large .portfolio-image {
@@ -656,7 +617,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(26, 35, 50, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -929,11 +890,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-md);
 }
 
-/* ================================
+/* ======================================
    FOOTER
-   ================================ */
+   ====================================== */
 #footer {
-  background: #0d1117;
+  background: var(--primary);
   color: rgba(255, 255, 255, 0.7);
   padding: 40px 0;
   text-align: center;
@@ -945,9 +906,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
 }
 
-/* ================================
+/* ======================================
    RESPONSIVE
-   ================================ */
+   ====================================== */
 @media (max-width: 1200px) {
   .hero-grid {
     gap: 60px;
@@ -963,39 +924,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991px) {
-  .nav-toggle {
-    display: inline-flex;
-  }
-  
-  .navbar ul {
-    display: none;
-    position: fixed;
-    top: var(--header-height);
-    left: 20px;
-    right: 20px;
-    flex-direction: column;
-    gap: 0;
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: var(--shadow-lg);
-    z-index: 999;
-  }
-  
-  .navbar.nav-open ul {
-    display: flex;
-  }
-  
-  .navbar a {
-    width: 100%;
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(26, 35, 50, 0.1);
-  }
-  
-  .navbar li:last-child a {
-    border-bottom: none;
-  }
-  
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -1033,19 +961,8 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: span 1;
   }
   
-  .contact-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .contact-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .btn-contact {
-    width: 100%;
-    justify-content: center;
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1054,7 +971,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
   }
   
-  .hero-description {
+  .hero-subtitle {
     font-size: 1.1rem;
   }
   
@@ -1079,8 +996,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
   }
   
-  .contact-text h2 {
-    font-size: 2rem;
+  .contact-info,
+  .contact-form {
+    padding: 30px;
   }
 }
 
