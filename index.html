@@ -376,7 +376,7 @@
             <i class="bi bi-envelope-fill"></i>
             <div>
               <strong>Email</strong>
-              <p><a href="/cdn-cgi/l/email-protection#25464a4b5144465165404940460855574a08564057534c4640560b4357"><span class="__cf_email__" data-cfemail="26454948524745526654434852125e084054">[email&#160;protected]</span></a></p>
+              <p><a href="mailto:contact@elec-pro-services.fr">contact@rent4x.fr</a></p>
             </div>
           </div>
           
@@ -439,7 +439,7 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
     // Initialize GLightbox
@@ -503,4 +503,14 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-   
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.service-item, .portfolio-item, .visual-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
